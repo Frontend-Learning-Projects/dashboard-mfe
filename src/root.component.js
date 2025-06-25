@@ -1,3 +1,11 @@
-export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
-}
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+
+const Root = () => {
+  return (
+    <BrowserRouter basename="dashboard">
+      <App />;
+    </BrowserRouter>
+  );
+};
+export default Root;
